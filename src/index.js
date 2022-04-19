@@ -1,4 +1,5 @@
-const baseURL = `https://musicbrainz.org/ws/2/artist/?query=${artist}&fmt=json`;
+// const baseURL = `"https://musicbrainz.org/ws/2/artist/?query=" + ${artist} + "&fmt=json"`;
+const baseURL = "https://musicbrainz.org/ws/2/artist/?query=Madonna&fmt=json";
 const menu = document.getElementById("playlist");
 const musicButton = document.getElementById("music-button");
 const likeBtn = document.getElementById("add-to-playlist-button");
@@ -15,10 +16,11 @@ function getMusic() {
     const ul = document.getElementById("artists-ul");
     fetchMusic()
     .then(data => { 
-        data.forEach(artist => {
-            ul.innerHTML +=   
-            `<li>${artist.name}</li>` 
-        })
+        // data.map(artist => {
+        //     ul.innerHTML +=   
+        //     `<li>${artist.name}</li>` 
+        // })
+        console.log(data)
     })
 };
 
