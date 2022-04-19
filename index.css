@@ -15,6 +15,10 @@ body {
     box-shadow: 3px 4px #e04b52;
     justify-content: center;
   }
+  form {
+    text-align: center;
+    padding: 1rem;
+  }
 
   button {
     position: relative;

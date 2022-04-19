@@ -1,8 +1,11 @@
 // const baseURL = `"https://musicbrainz.org/ws/2/artist/?query=" + ${artist} + "&fmt=json"`;
+// const artist = 
 const baseURL = "https://musicbrainz.org/ws/2/artist/?query=Madonna&fmt=json";
 const menu = document.getElementById("playlist");
 const musicButton = document.getElementById("music-button");
 const likeBtn = document.getElementById("add-to-playlist-button");
+const inputInit = input = document.getElementById("text-input");
+var input = document.getElementById("text-input").value;
 
 window.addEventListener("DOMContentLoaded", () => {
    buttonEvent();
@@ -66,3 +69,8 @@ function playlistEvent () {
 // submit listener for artist search 
 // listener to add to favorites in dropdown (playlist add)
 // delete button
+
+// submit form with artist name 
+// upon click, it generates the artist with a card 
+// add to playlist click adds it to My Playlist
+// in My Playlist, you can use a delete button to remove it from list
