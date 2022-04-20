@@ -9,8 +9,6 @@ const artistContainer = document.getElementById("artist-container")
 window.addEventListener("DOMContentLoaded", () => {
    buttonEvent();
    playlistEvent();
-//    getMusic();
-//    addToPlaylistEvent();
 });
 
 
@@ -73,9 +71,6 @@ function playlistEvent () {
 
 
 
-// .split("") then .join()
-//  + ${artist}.split(" ").join("_")
-// the names of the artists 
 // error handle of artist fetch 
 // submit listener for artist search 
 // listener to add to favorites in dropdown (playlist add)
