@@ -8,6 +8,7 @@ const artistContainer = document.getElementById("artist-container")
 window.addEventListener("DOMContentLoaded", () => {
    buttonEvent();
    likeButton();
+   removeArtist();
 });
 
 function getMusic() {
@@ -24,10 +25,10 @@ function getMusic() {
         
         card.append(name, description);
         artistContainer.append(card);
-        if(artist === undefined) {
-             alert("Sorry, try a new artist!")
-        }
-        return data;
+        // if(artist === undefined) {
+        //      alert("Sorry, try a new artist!")
+        // }
+        // return data;
     })
 };
 
@@ -49,13 +50,13 @@ function likeButton () {
         alert("You've liked this artist!")
     })}
 
-// function renderArtist() {
-//     const cardTitle = document.getElementById("card-title");
-//     const cardText = document.getElementById("card-text");
-//     cardTitle = artistOne.name
-//     cardText = artistOne.disambiguation
-// };
-
+function removeArtist () {
+    const removeBtn = getElementById("remove-btn");
+    removeBtn.addEventListener("click", () => {
+        console.log("hi")
+        removeBtn.remove(artistOne)
+   })    
+};
 
 // error handle of artist fetch 
 // submit listener for artist search 
