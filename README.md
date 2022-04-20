@@ -1,7 +1,10 @@
-Description of the App
+The Artist Finder App 
+(Find your favorite artist!)
 
-URL of REPO
+https://github.com/mariamnersisyan97/MusicFinderApp
 
-How to navigate it/run it
+This app was made with music lovers in mind! A quick search for your favorite artist will render some information about them.
 
-Insert GIFs of project navigation 
+<!-- How to navigate it/run it -->
+
+<!-- Insert GIFs of project navigation  -->
