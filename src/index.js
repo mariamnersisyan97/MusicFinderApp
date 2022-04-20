@@ -11,13 +11,12 @@ window.addEventListener("DOMContentLoaded", () => {
    playlistEvent();
 });
 
-
 function getMusic() {
     fetchMusic()
     .then(res => { 
         const artistOne = res.artists[0];
         console.log(artistOne);
-            
+        
         const card = document.createElement("div");
         const name = document.createElement("h2")
         const description = document.createElement("p");
@@ -43,21 +42,12 @@ function buttonEvent () {
 })
 };
 
-function renderArtist(artist) {
+function renderArtist() {
     const cardTitle = document.getElementById("card-title");
     const cardText = document.getElementById("card-text");
-    cardTitle = artist.name
-    cardText = artist.disambiguation
-    // const artistCard = 
-    // `<div class ="card">
-    // <h2> ${artist.name}<h2/>
-    // <p>${artist.disambiguation}</p>
-    // <p> Genre: ${artist} </p>
-    // `
-    // const card = document.getElementsByClassName("artist-card");
-    // card.innerHTML += artistCard;
-}
-
+    cardTitle = artistOne.name
+    cardText = artistOne.disambiguation
+};
 function playlistEvent () {
   menu.addEventListener("click", () => {
     console.log("work")
