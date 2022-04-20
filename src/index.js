@@ -1,22 +1,21 @@
 const baseURL = `https://musicbrainz.org/ws/2/artist/?query=`;
 const menu = document.getElementById("playlist");
 const musicButton = document.getElementById("music-button");
-const likeBtn = document.getElementById("add-to-playlist-button");
+const likeBtn = document.getElementById("like-button");
 const inputInit = document.getElementById("text-input");
 const artistContainer = document.getElementById("artist-container")
 
-
 window.addEventListener("DOMContentLoaded", () => {
    buttonEvent();
-   playlistEvent();
+   likeButton();
 });
 
 function getMusic() {
     fetchMusic()
-    .then(res => { 
+    .then(res => {  
         const artistOne = res.artists[0];
         console.log(artistOne);
-        
+
         const card = document.createElement("div");
         const name = document.createElement("h2")
         const description = document.createElement("p");
@@ -24,13 +23,16 @@ function getMusic() {
         description.innerText = `Description: ${artistOne.disambiguation} `
         
         card.append(name, description);
-        artistContainer.append(card)
+        artistContainer.append(card);
+        if(artist === undefined) {
+             alert("Sorry, try a new artist!")
+        }
+        return data;
     })
 };
 
 async function fetchMusic() {
     const artist = document.getElementById("text-input").value.split(" ").join("_");
-    console.log(artist)
     let res = await fetch(baseURL + `${artist}&fmt=json`);
     let data = await res.json();
     return data;
@@ -42,23 +44,17 @@ function buttonEvent () {
 })
 };
 
-function renderArtist() {
-    const cardTitle = document.getElementById("card-title");
-    const cardText = document.getElementById("card-text");
-    cardTitle = artistOne.name
-    cardText = artistOne.disambiguation
-};
-function playlistEvent () {
-  menu.addEventListener("click", () => {
-    console.log("work")
-  })
-};
+function likeButton () {
+    likeBtn.addEventListener("click", () =>{
+        alert("You've liked this artist!")
+    })}
 
-// function addToPlaylistEvent () {
-//     likeBtn.addEventListener("click", () =>{
-
-//     })}
-
+// function renderArtist() {
+//     const cardTitle = document.getElementById("card-title");
+//     const cardText = document.getElementById("card-text");
+//     cardTitle = artistOne.name
+//     cardText = artistOne.disambiguation
+// };
 
 
 // error handle of artist fetch 
