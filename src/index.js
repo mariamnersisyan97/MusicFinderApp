@@ -1,33 +1,40 @@
-const artist = document.getElementById("text-input").value;
-const baseURL = `https://musicbrainz.org/ws/2/artist/?query=${artist}&fmt=json`;
+const baseURL = `https://musicbrainz.org/ws/2/artist/?query=`;
 const menu = document.getElementById("playlist");
 const musicButton = document.getElementById("music-button");
 const likeBtn = document.getElementById("add-to-playlist-button");
 const inputInit = document.getElementById("text-input");
+const artistContainer = document.getElementById("artist-container")
 
 
 window.addEventListener("DOMContentLoaded", () => {
    buttonEvent();
    playlistEvent();
-   getMusic();
+//    getMusic();
 //    addToPlaylistEvent();
 });
 
 
 function getMusic() {
-    // const ul = document.getElementById("artist-ul");
     fetchMusic()
-    .then(data => { 
-        // data.map(artist => {
-        //     ul.innerHTML +=   
-        //     `<li>${artist.name}</li>` 
-        // })
-        console.log(data)
+    .then(res => { 
+        const artistOne = res.artists[0];
+        console.log(artistOne);
+            
+        const card = document.createElement("div");
+        const name = document.createElement("h2")
+        const description = document.createElement("p");
+        name.innerText = `Name: ${artistOne.name} `
+        description.innerText = `Description: ${artistOne.disambiguation} `
+        
+        card.append(name, description);
+        artistContainer.append(card)
     })
 };
 
 async function fetchMusic() {
-    let res = await fetch(baseURL);
+    const artist = document.getElementById("text-input").value.split(" ").join("_");
+    console.log(artist)
+    let res = await fetch(baseURL + `${artist}&fmt=json`);
     let data = await res.json();
     return data;
 };
