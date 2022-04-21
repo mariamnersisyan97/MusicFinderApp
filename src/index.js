@@ -1,15 +1,16 @@
 // const baseURL = `https://musicbrainz.org/ws/2/artist?fmt=json&query=`;
-const baseURL = `https://musicbrainz.org/ws/2/release-group?fmt=json&limit=10&query=artist:`;
+const baseURL = `https://musicbrainz.org/ws/2/release-group?fmt=json&limit=20&query=artist:`;
 const menu = document.getElementById("playlist");
 const musicButton = document.getElementById("music-button");
 const likeBtn = document.getElementById("like-button");
 const inputInit = document.getElementById("text-input");
+const removeBtn = document.getElementById("delete-btn");
 // const artistContainer = document.getElementById("artist-container");
 
 window.addEventListener("DOMContentLoaded", () => {
    buttonEvent();
    likeButton();
-//    removeArtist();
+   removeArtist();
 });
 
 function getMusic() {
@@ -36,17 +37,17 @@ function buttonEvent () {
 };
 
 function likeButton () {
-    likeBtn.addEventListener("click", () =>{
+    likeBtn.addEventListener("click", () => {
         alert("You've liked this artist!")
-    })}
+    })
+};
 
-// function removeArtist () {
-//     const removeBtn = getElementById("remove-btn");
-//     removeBtn.addEventListener("click", () => {
-//         console.log("hi")
-//         removeBtn.remove(artistOne)
-//    })    
-// };
+function removeArtist () {
+    removeBtn.addEventListener("click", () => {
+        console.log("hi")
+   })    
+};
+
 function renderAlbums (albums) {
     albums.forEach(album=> {
         // const id = album.id;
