@@ -49,9 +49,9 @@ function likeButton () {
 // };
 function renderAlbums (albums) {
     albums.forEach(album=> {
-        const id = album.id;
+        // const id = album.id;
 
-        const coverArtURL = `coverartarchive.org/release-group/${id}/front`
+        // const coverArtURL = `coverartarchive.org/release-group/${id}/front`
          
         // console.log(album.title)
         // console.log(coverArtURL)
@@ -61,9 +61,9 @@ function renderAlbums (albums) {
         const name = document.createElement("h2")
         const description = document.createElement("p");
         const works = document.createElement("p");
-        name.innerText = `Name: ${albums[0]['artist-credit'][0].name} `
-        description.innerText = `Description: ${albums[0]['artist-credit'][0].artist.disambiguation} `
-        works.innerText = `Albums: ${albums[0].title}`
+        name.innerText = `Name: ${album['artist-credit'][0].name} `
+        description.innerText = `Description: ${album['artist-credit'][0].artist.disambiguation} `
+        works.innerText = `Albums: ${album.title}`
         
         card.append(name, description, works);
         artistContainer.append(card);
