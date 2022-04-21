@@ -1,11 +1,9 @@
-// const baseURL = `https://musicbrainz.org/ws/2/artist?fmt=json&query=`;
 const baseURL = `https://musicbrainz.org/ws/2/release-group?fmt=json&limit=20&query=artist:`;
 const menu = document.getElementById("playlist");
 const musicButton = document.getElementById("music-button");
 const likeBtn = document.getElementById("like-button");
 const inputInit = document.getElementById("text-input");
 const removeBtn = document.getElementById("delete-btn");
-// const artistContainer = document.getElementById("artist-container");
 
 window.addEventListener("DOMContentLoaded", () => {
    buttonEvent();
@@ -67,19 +65,6 @@ function renderAlbums (albums) {
       const albumBox= document.getElementById("artist-container");
       albumBox.innerHTML += albumCard
       
-
-
-        // const card = document.createElement("div");
-        // const name = document.createElement("h2")
-        // const description = document.createElement("p");
-        // const works = document.createElement("p");
-        // name.innerText = `Name: ${album['artist-credit'][0].name} `
-        // description.innerText = `Description: ${album['artist-credit'][0].artist.disambiguation} `
-        // works.innerText = `Albums: ${album.title}`
-        
-        // card.append(name, description, works);
-        // artistContainer.append(card);
-        //async await to grab id for cover art?
     })
 };
 
