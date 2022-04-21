@@ -1,10 +1,10 @@
-body {
+  body {
     margin: 0;
     font-family: monospace;
     background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
   }
   
-   form {
+  form {
     text-align: center;
     padding: 1rem;
   }
@@ -29,16 +29,17 @@ body {
     color: navy;
   }
   
-  .container {
+  /* .container {
     padding: 1rem;
     width: stretch;
     height: auto;
     display: none;
     background: #515DA2;
     opacity: .8;
-  }
+  } */
+
 #artist-container {
-  text-align: center;
+    text-align: center;
     border: grey solid 1px;
     padding: 1rem;
     width: 15rem;
@@ -47,4 +48,14 @@ body {
     margin: 1rem 2rem;
     box-shadow: 3px 4px #e04b52;
     justify-content: center;
+}
+.card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: 25rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52
 }
