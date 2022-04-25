@@ -13,7 +13,7 @@
     position: relative;
     background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     height: 3rem;
     width: max-content;
     color: whitesmoke;
