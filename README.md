@@ -1,9 +1,9 @@
-The Artist Finder App
-(Find your favorite artist!)
+The Album Finder App
+(Find your favorite artists albums!)
 
 https://github.com/mariamnersisyan97/MusicFinderApp
 
-This app was made with music lovers in mind! A quick search for your favorite artist will render some information about them.
+This app was made with music lovers in mind! A quick search for your favorite artist will render some information about them as well as a detailed search of their discography!.
 
 <!-- How to navigate it/run it -->
 
@@ -11,10 +11,11 @@ This app was made with music lovers in mind! A quick search for your favorite ar
 
 Features:
 
-- Search through libraries of artists and find your favorites
+- Search through libraries of artists and find your favorite albums
 - Can locate artists with a simple search
+- View top 20 albums of the artist you've searched
 - Can like any artist of your choosing
-- Can remove an artist display
+- View a list of your liked artists
 
 Technologies Used:
 API: https://musicbrainz.org/
