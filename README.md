@@ -5,10 +5,6 @@ https://github.com/mariamnersisyan97/MusicFinderApp
 
 This app was made with music lovers in mind! A quick search for your favorite artist will render some information about them as well as a detailed search of their discography!.
 
-<!-- How to navigate it/run it -->
-
-<!-- Insert GIFs of project navigation  -->
-
 Features:
 
 - Search through libraries of artists and find your favorite albums
@@ -17,12 +13,20 @@ Features:
 - Can like any artist of your choosing
 - View a list of your liked artists
 
-Technologies Used:
-API: https://musicbrainz.org/
-Bootstrap
-HTML/CSS/JS
-
 How To Navigate:
 
 Find the input form and enter an artist of your choice as such:
-![Alt Text](gif1.gif)
+![Gif 1](gif1.gif)
+Be sure to give the button a click to generate your artists discography!
+
+Give the artist a like by clicking the Like! button on the right hand side.
+![Gif 2](gif2.gif)
+You will get an alert that you have successfully liked the artist.
+
+Watch as the artist you like appears on your artist playlist!
+![Gif 3](gif3.gif)
+
+Technologies Used:
+API: https://musicbrainz.org/
+Bootstrap
+HTML/CSS/Vanilla JS
