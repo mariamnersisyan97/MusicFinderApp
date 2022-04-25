@@ -1,4 +1,4 @@
-const baseURL = `https://musicbrainz.org/ws/2/release-group?fmt=json&limit=20&query=artist:`;
+const baseURL = `https://musicbrainz.org/ws/2/release-group?fmt=json&limit=7&query=artist:`;
 const menu = document.getElementById("playlist");
 const musicButton = document.getElementById("music-button");
 const likeBtn = document.getElementById("like-button");
