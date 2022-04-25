@@ -21,3 +21,8 @@ Technologies Used:
 API: https://musicbrainz.org/
 Bootstrap
 HTML/CSS/JS
+
+How To Navigate:
+
+Find the input form and enter an artist of your choice as such:
+![Alt Text](gif1.gif)
